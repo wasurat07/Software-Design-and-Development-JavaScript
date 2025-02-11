@@ -54,6 +54,11 @@ JavaScript สามารถเพิ่มลงในเว็บเพจไ
     </script>
 
     <!-- External JavaScript -->
+  <!-- ต้องสร้างไฟล์ script.js มีโค้ดโปรแกรมในไฟล์ดังนี้
+   function hello3(){
+    alert('คลิกปุ่มที่ 3!');
+    }
+ -->
     <script src="script.js"></script>
 </body>
 </html>
