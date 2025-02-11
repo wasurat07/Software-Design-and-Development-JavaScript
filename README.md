@@ -7,4 +7,4 @@
   - [การทดลองที่ 2.4 Function และ Error Function](./javascript-workshop.md#การทดลองที่-2-4-Function-และ-Arrow-Function)
 - [การทดลองที่ 3 การใช้ JavaScript ร่วมกับ HTML และ CSS](./javascript-workshop.md#การทดลองที่-3--การใช้-JavaScript-กับ-HTML-และ-CSS)
   - [การทดลองที่ 3.1 การสร้างปุ่มและจัดการ Event ด้วย JavaScript](./javascript-workshop.md#การทดลองที่-31-การสร้างปุ่มและจัดการ-Event-ด้วย-JavaScript)
-  - [การทดลองที่ 3.2 การสร้างฟอร์มสำหรับจองห้องพัก](./javascript-workshop.md#การทดลองที่-3-2-การสร้างฟอร์มสำหรับจองห้องพัก)
+  - [การทดลองที่ 3.2 การสร้างฟอร์มสำหรับจองห้องพัก](./javascript-workshop.md#การทดลองที่-32-การสร้างฟอร์มสำหรับจองห้องพัก)
