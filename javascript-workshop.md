@@ -484,8 +484,8 @@ console.log("เลขคู่:", evenNumbers); // [2, 4]
 
 
 ## การทดลองที่ 3 : การใช้ JavaScript กับ HTML และ CSS
-
-### ตัวอย่าง 3.1 การสร้างปุ่มและจัดการ Event ด้วย JavaScript
+### การทดลองที่ 3.1 การสร้างปุ่มและจัดการ Event ด้วย JavaScript
+### ตัวอย่างที่ 1 
 ```html
 <!DOCTYPE html>
 <html>
@@ -503,7 +503,7 @@ console.log("เลขคู่:", evenNumbers); // [2, 4]
 </body>
 </html>
 ```
-### ตัวอย่าง 3.2 การสร้างปุ่มและจัดการ Event ด้วย JavaScript
+### ตัวอย่างที่ 2
 ```html
 <!DOCTYPE html>
 <html>
@@ -522,7 +522,7 @@ console.log("เลขคู่:", evenNumbers); // [2, 4]
 </body>
 </html>
 ```
-### ตัวอย่าง 3.3 การสร้างปุ่มและจัดการ Event ด้วย JavaScript
+### ตัวอย่างที่ 3 
 ```html
 <!DOCTYPE html>
 <html>
