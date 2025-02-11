@@ -3,7 +3,7 @@
 - [การทดลองที่ 2 พื้นฐาน JavaScript](./javascript-workshop.md#การทดลองที่-2-พื้นฐาน-JavaScript)
   - [การทดลองที่ 2.1 การประกาศตัวแปรและชนิดข้อมูล](./javascript-workshop.md#21-การประกาศตัวแปรและชนิดข้อมูล)
   - [การทดลองที่ 2.2 การดำเนินการทางคณิตศาสตร์](./javascript-workshop.md#22-การดำเนินการทางคณิตศาสตร์)
-  - [การทดลองที่ 2.3 การควบคุมการทำงาน](./javascript-workshop.md#23-การควมคุมการทำงาน)
+  - [การทดลองที่ 2.3 การควบคุมการทำงาน](./javascript-workshop.md#23-การควบคุมการทำงาน)
   - [การทดลองที่ 2.4 Function และ Error Function](./javascript-workshop.md#24-Functions-และ-Arrow-Functions)
 - [การทดลองที่ 3 การใช้ JavaScript ร่วมกับ HTML และ CSS](./javascript-workshop.md#การทดลองที่-3--การใช้-JavaScript-กับ-HTML-และ-CSS)
   - [การทดลองที่ 3.1 การสร้างปุ่มและจัดการ Event ด้วย JavaScript](./javascript-workshop.md#การทดลองที่-31-การสร้างปุ่มและจัดการ-Event-ด้วย-JavaScript)
