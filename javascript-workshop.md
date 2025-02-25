@@ -76,9 +76,64 @@ JavaScript สามารถเพิ่มลงในเว็บเพจไ
    - มีปุ่มเมื่อคลิกแล้วจะแสดงข้อความที่กรอกในช่องข้อความ  (สามารถใช้ document.getElementById('id ของ textbox').value เพื่อดึงข้อมูลในช่อง)
 ### บันทึกผลการทดลอง 
 ```html
-[บันทึกโค้ด ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>แสดงข้อมูลด้วย JavaScript</title>
+</head>
+<body>
+    <h2>ทดสอบ JavaScript</h2>
+
+    <!-- ปุ่มที่ 1: Inline JavaScript -->
+    <button onclick="alert('นายวสุรัตน์ มณีรัตนะพร')">ปุ่มที่ 1</button>
+
+    <!-- ปุ่มที่ 2: Internal JavaScript -->
+    <button id="btn2">ปุ่มที่ 2</button>
+
+    <!-- ปุ่มที่ 3: External JavaScript -->
+    <button id="btn3">ปุ่มที่ 3</button>
+
+    <br><br>
+    <!-- กล่องข้อความและปุ่มแสดงผล -->
+    <input type="text" id="textbox" placeholder="กรอกข้อความที่นี่">
+    <button onclick="showText()">แสดงข้อความ</button>
+    <p id="display"></p>
+
+    <script>
+        // Internal JavaScript สำหรับแสดงวันที่ปัจจุบันในรูปแบบไทย
+        document.getElementById('btn2').onclick = function() {
+            let options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+            let thaiDate = new Date().toLocaleDateString('th-TH', options);
+            alert('วันที่ปัจจุบัน: ' + thaiDate);
+        };
+
+        // Function สำหรับแสดงข้อความจากช่อง input
+        function showText() {
+            let text = document.getElementById('textbox').value;
+            document.getElementById('display').innerText = 'ข้อความ: ' + text;
+        }
+    </script>
+
+    <!-- External JavaScript -->
+    <script src="/js/index.js"></script>
+</body>
+</html>
+```
+```js
+// External JavaScript สำหรับแสดงเวลาปัจจุบันในไทย
+document.getElementById('btn3').onclick = function() {
+    let options = { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Asia/Bangkok' };
+    let thaiTime = new Date().toLocaleTimeString('th-TH', options);
+    alert('เวลาปัจจุบัน: ' + thaiTime);
+};
 ```
 [รูปผลการทดลองที่ 1]
+![image](https://github.com/user-attachments/assets/a2d3e4c9-39ef-4966-b501-d63ef5408082)
+![image](https://github.com/user-attachments/assets/58a2e60b-1f46-4530-a359-6aa02df797a6)
+![image](https://github.com/user-attachments/assets/05ab93c4-2992-40cb-b73d-3cca2afb7ef6)
+![image](https://github.com/user-attachments/assets/a7ef54d4-96f6-46fc-a5e6-d5e8c92dcaac)
+
   
 ## การทดลองที่ 2: พื้นฐาน JavaScript
 ### 2.1 การประกาศตัวแปรและชนิดข้อมูล
