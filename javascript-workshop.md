@@ -285,9 +285,49 @@ number /= 2;          // เท่ากับ number = number / 2
 
 ### บันทึกผลการทดลอง 2.2
 ```html
-[บันทึกโค้ด ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำนวณคะแนนเฉลี่ยและราคาสินค้า</title>
+    <script src="script.js" defer></script> <!-- เรียกใช้ไฟล์ JavaScript -->
+</head>
+<body>
+    <h1>คำนวณคะแนนเฉลี่ย</h1>
+    <div id="average-score"></div>
+
+    <h1>คำนวณราคาสินค้ารวม VAT</h1>
+    <div id="product-price"></div>
+</body>
+</html>
+```
+```js
+// โปรแกรมคำนวณคะแนนเฉลี่ย 3 วิชา
+let score1 = 85;  // คะแนนวิชาที่ 1
+let score2 = 90;  // คะแนนวิชาที่ 2
+let score3 = 78;  // คะแนนวิชาที่ 3
+
+// คำนวณคะแนนเฉลี่ย
+let averageScore = (score1 + score2 + score3) / 3;
+
+// แสดงผลคะแนนเฉลี่ยใน HTML
+document.getElementById('average-score').innerHTML = `คะแนนเฉลี่ย: ${averageScore.toFixed(2)}`;
+
+// โปรแกรมคำนวณราคาสินค้าที่รวม VAT 7%
+let productName = "โทรศัพท์มือถือ";
+let productPrice = 15000;  // ราคาสินค้า
+
+// คำนวณราคาสินค้ารวม VAT 7%
+let vatRate = 0.07;  // อัตรา VAT
+let totalPrice = productPrice + (productPrice * vatRate);
+
+// แสดงผลราคาสินค้ารวม VAT ใน HTML
+document.getElementById('product-price').innerHTML = `ชื่อสินค้า: ${productName} <br> ราคาสินค้า (รวม VAT 7%): ${totalPrice.toFixed(2)} บาท`;
 ```
 [รูปผลการทดลองที่ 2.2]
+![image](https://github.com/user-attachments/assets/17139b89-9d45-4609-ae3b-2b76fd90f635)
+
 
 ### 2.3 การควบคุมการทำงาน
 
