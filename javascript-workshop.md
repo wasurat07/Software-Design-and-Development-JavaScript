@@ -195,45 +195,42 @@ let person = {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ข้อมูลนักศึกษา</title>
-    <script src="/js/Student data.js"></script>
 </head>
 <body>
     <h1>ข้อมูลนักศึกษา</h1>
-    <div id="student-info"></div>
-    <script>
-        // แสดงข้อมูลนักศึกษาใน HTML
-        const studentInfoDiv = document.getElementById('student-info');
-        studentInfoDiv.innerHTML = `
-            <p>รหัสนักศึกษา: ${student.id}</p>
-            <p>ชื่อนักศึกษา: ${student.name}</p>
-            <p>สาขาวิชา: ${student.major}</p>
-            <p>เกรดเฉลี่ย: ${student.GPA}</p>
-            <p>คะแนนสอบกลางภาค: ${midtermScore}</p>
-            <p>คะแนนสอบปลายภาค: ${finalScore}</p>
-        `;
-    </script>
+    <div id="student-info"></div> <!-- สถานที่แสดงข้อมูลนักศึกษา -->
+
+    <script src="script.js"></script> <!-- เชื่อมต่อไฟล์ JavaScript -->
 </body>
 </html>
 ```
 ```js
-// ประกาศตัวแปรเก็บข้อมูลนักศึกษา
-let studentID = "67030344";  // รหัสนักศึกษา
-let studentName = "วสุรัตน์ มณีรัตนะพร";  // ชื่อนักศึกษา
-let midtermScore = 67;  // คะแนนสอบกลางภาค
-let finalScore = 72;  // คะแนนสอบปลายภาค
-let totalScore = midtermScore + finalScore;
-let averageScore = (midtermScore + finalScore)/2;
+// ประกาศตัวแปรสำหรับเก็บข้อมูลนักศึกษา
+let studentId = "67030344";          // รหัสนักศึกษา
+let studentName = "วสุรัตน์ มณีรัตนะพร";          // ชื่อนักศึกษา
+let midtermScore = 67;               // คะแนนสอบกลางภาค
+let finalScore = 72;                 // คะแนนสอบปลายภาค
 
 // สร้าง Object สำหรับเก็บข้อมูลนักศึกษา
-let student = {
-    id: studentID,
-    name: studentName,
-    major: "เทคโนโลยีคอมพิวเตอร์",  // สาขาวิชา
-    GPA: 3.75  // เกรดเฉลี่ย
+const student = {
+    id: studentId,                   // รหัสนักศึกษา
+    name: studentName,               // ชื่อ
+    major: "เทคโนโลยีคอมพิวเตอร์",    // สาขาวิชา
+    gpa: 3.75 // เกรดเฉลี่ย
 };
+
+// แสดงข้อมูลนักศึกษาใน HTML
+const studentInfoDiv = document.getElementById("student-info");
+studentInfoDiv.innerHTML = 
+    "<p>รหัสนักศึกษา: " + student.id + "</p>" +
+    "<p>ชื่อ: " + student.name + "</p>" +
+    "<p>คะแนนสอบกลางภาค: " + midtermScore + "</p>" +
+    "<p>คะแนนสอบปลายภาค: " + finalScore + "</p>" +
+    "<p>สาขาวิชา: " + student.major + "</p>" +
+    "<p>เกรดเฉลี่ย: " + student.gpa.toFixed(2) + "</p>";
 ```
 [รูปผลการทดลองที่ 2.1]
-![image](https://github.com/user-attachments/assets/f9192721-1450-4278-a31d-f8ab79751ec4)
+![image](https://github.com/user-attachments/assets/668f2499-4cef-45ea-98c1-f810cfe07434)
 
 
 ### 2.2 การดำเนินการทางคณิตศาสตร์
