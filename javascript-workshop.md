@@ -227,7 +227,7 @@ studentInfoDiv.innerHTML =
     "<p>คะแนนสอบกลางภาค: " + midtermScore + "</p>" +
     "<p>คะแนนสอบปลายภาค: " + finalScore + "</p>" +
     "<p>สาขาวิชา: " + student.major + "</p>" +
-    "<p>เกรดเฉลี่ย: " + student.gpa.toFixed(2) + "</p>";
+    "<p>เกรดเฉลี่ย: " + student.gpa + "</p>";
 ```
 [รูปผลการทดลองที่ 2.1]
 ![image](https://github.com/user-attachments/assets/668f2499-4cef-45ea-98c1-f810cfe07434)
