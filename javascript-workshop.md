@@ -288,42 +288,77 @@ number /= 2;          // เท่ากับ number = number / 2
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>คำนวณคะแนนเฉลี่ยและราคาสินค้า</title>
-    <script src="script.js" defer></script> <!-- เรียกใช้ไฟล์ JavaScript -->
 </head>
 <body>
     <h1>คำนวณคะแนนเฉลี่ย</h1>
-    <div id="average-score"></div>
+    <form id="score-form">
+        <label for="score1">คะแนนวิชาที่ 1:</label>
+        <input type="number" id="score1" required><br>
+        <label for="score2">คะแนนวิชาที่ 2:</label>
+        <input type="number" id="score2" required><br>
+        <label for="score3">คะแนนวิชาที่ 3:</label>
+        <input type="number" id="score3" required><br>
+        <button type="submit">คำนวณคะแนนเฉลี่ย</button>
+    </form>
+    <div id="average-score"></div> <!-- แสดงคะแนนเฉลี่ย -->
 
-    <h1>คำนวณราคาสินค้ารวม VAT</h1>
-    <div id="product-price"></div>
+    <h1>คำนวณราคาสินค้าพร้อม VAT</h1>
+    <form id="product-form">
+        <label for="productName">ชื่อสินค้า:</label>
+        <input type="text" id="productName" required><br>
+        <label for="productPrice">ราคาสินค้า:</label>
+        <input type="number" id="productPrice" required><br>
+        <button type="submit">คำนวณราคาสินค้าพร้อม VAT</button>
+    </form>
+    <div id="product-price"></div> <!-- แสดงราคาสินค้าพร้อม VAT -->
+
+    <script src="script.js"></script> <!-- เชื่อมต่อไฟล์ JavaScript -->
 </body>
 </html>
 ```
 ```js
-// โปรแกรมคำนวณคะแนนเฉลี่ย 3 วิชา
-let score1 = 85;  // คะแนนวิชาที่ 1
-let score2 = 90;  // คะแนนวิชาที่ 2
-let score3 = 78;  // คะแนนวิชาที่ 3
-
 // คำนวณคะแนนเฉลี่ย
-let averageScore = (score1 + score2 + score3) / 3;
+const scoreForm = document.getElementById("score-form");
+const averageScoreDiv = document.getElementById("average-score");
 
-// แสดงผลคะแนนเฉลี่ยใน HTML
-document.getElementById('average-score').innerHTML = `คะแนนเฉลี่ย: ${averageScore.toFixed(2)}`;
+scoreForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // ป้องกันการรีเฟรชหน้า
 
-// โปรแกรมคำนวณราคาสินค้าที่รวม VAT 7%
-let productName = "โทรศัพท์มือถือ";
-let productPrice = 15000;  // ราคาสินค้า
+    // รับค่าจาก input
+    let score1 = parseFloat(document.getElementById("score1").value);
+    let score2 = parseFloat(document.getElementById("score2").value);
+    let score3 = parseFloat(document.getElementById("score3").value);
 
-// คำนวณราคาสินค้ารวม VAT 7%
-let vatRate = 0.07;  // อัตรา VAT
-let totalPrice = productPrice + (productPrice * vatRate);
+    // คำนวณคะแนนเฉลี่ย
+    let averageScore = (score1 + score2 + score3) / 3;
 
-// แสดงผลราคาสินค้ารวม VAT ใน HTML
-document.getElementById('product-price').innerHTML = `ชื่อสินค้า: ${productName} <br> ราคาสินค้า (รวม VAT 7%): ${totalPrice.toFixed(2)} บาท`;
+    // แสดงผลคะแนนเฉลี่ยใน HTML
+    averageScoreDiv.innerHTML = "คะแนนเฉลี่ย: " + averageScore.toFixed(2);
+});
+
+// คำนวณราคาสินค้าพร้อม VAT
+const productForm = document.getElementById("product-form");
+const productPriceDiv = document.getElementById("product-price");
+
+productForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // ป้องกันการรีเฟรชหน้า
+
+    // รับค่าจาก input
+    let productName = document.getElementById("productName").value;
+    let productPrice = parseFloat(document.getElementById("productPrice").value);
+
+    // คำนวณราคาสินค้าที่รวม VAT 7%
+    let vatRate = 0.07; // อัตรา VAT 7%
+    let totalPrice = productPrice + (productPrice * vatRate);
+
+    // แสดงผลการคำนวณใน HTML
+    productPriceDiv.innerHTML = "ชื่อสินค้า: " + productName + "<br>" +
+                                 "ราคาสินค้าพร้อม VAT 7%: " + totalPrice.toFixed(2) + " บาท";
+});
 ```
 [รูปผลการทดลองที่ 2.2]
-![image](https://github.com/user-attachments/assets/17139b89-9d45-4609-ae3b-2b76fd90f635)
+![image](https://github.com/user-attachments/assets/fef0aa0e-071d-4169-9154-f5aaafb2ad56)
+
 
 
 ### 2.3 การควบคุมการทำงาน
